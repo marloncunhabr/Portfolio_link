@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: @corDeFundo;
+    background-image: linear-gradient(45deg, @corDeFundo, @cordosBotoes);
 
     h1 {
         color: @corDosTextos;
@@ -27,11 +27,11 @@ body {
 }
 
 li {
-    list-style: none; 
+    list-style: none;
 }
 
 .container {
-    max-width: 960px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
     height: 100vh;
@@ -39,12 +39,19 @@ li {
     flex-direction: column;
     justify-content: center;
 
+
     @media @breakpointMobile {
-        max-width: 70%;
+        max-width: 80%;
     }
 
     @media @breakpointTablet {
         max-width: 80%;
+    }
+
+    li {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -94,6 +101,7 @@ header {
     li {
         img {
             transition: all ease .3s;
+
             &:hover {
                 transform: scale(1.3);
             }
@@ -107,20 +115,20 @@ header {
     &-itens {
         a {
             text-decoration: none;
-            background-color: @cordosBotoes;
+            background-color: @corDosTextos;
             display: block;
             padding: 16px 20px;
             margin-bottom: 16px;
             border-radius: 30px;
             text-align: center;
-            color: @corDosTextos;
+            color: @corDeFundo;
             font-weight: bold;
             border: 2px solid @corDosTextos;
             transition: all ease .5s;
 
             &:hover {
-                color: @cordosBotoes;
-                background-color: transparent;
+                color: @corDosTextos;
+                background-color: @cordosBotoes;
                 border: 2px solid @cordosBotoes;
             }
         }
