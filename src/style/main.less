@@ -97,15 +97,27 @@ header {
     max-width: 360px;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
 
     li {
-        img {
-            transition: all ease .3s;
+        a {
+            margin-left: 50%;
+            img {
+                transition: all ease .3s;
 
-            &:hover {
-                transform: scale(1.3);
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+            @media @breakpointMobile {
+                margin-left: 30%;
+            }
+        
+            @media @breakpointTablet {
+                max-width: 40%;
             }
         }
+
     }
 }
 
